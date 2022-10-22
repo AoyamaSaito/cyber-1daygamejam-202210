@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 8570200167511518239}
   - component: {fileID: 5593859264865031825}
   m_Layer: 5
-  m_Name: Tweet
+  m_Name: DarkTweet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,11 +855,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: "\u540D\u7121\u3057"
   _nameText: {fileID: 8570200167369688525}
-  _sentence: "\u725B\u30BF\u30F3\u3068\u304A\u9152\u304C\u3046\u307E\u3044"
+  _sentence: "\u3053\u306E\u4E16\u306E\u5168\u3066\u304C\u4E0D\u6109\u5FEB\u3002\u6D88\u3048\u308D\u3002"
   _sentenceText: {fileID: 8570200168188418313}
   _date: 20XX/XX/XX
   _dateText: {fileID: 8570200167310457344}
-  _isDark: 0
+  _isDark: 1
 --- !u!1 &8570200167598851587
 GameObject:
   m_ObjectHideFlags: 0
