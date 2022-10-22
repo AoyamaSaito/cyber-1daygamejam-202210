@@ -757,7 +757,7 @@ GameObject:
   - component: {fileID: 8570200167511518239}
   - component: {fileID: 5593859264865031825}
   m_Layer: 5
-  m_Name: Tweet
+  m_Name: NormalTweet 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -786,7 +786,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 24.7881}
-  m_SizeDelta: {x: 0, y: 149.5762}
+  m_SizeDelta: {x: 0, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8570200167511518238
 CanvasRenderer:
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: "\u540D\u7121\u3057"
   _nameText: {fileID: 8570200167369688525}
-  _sentence: "\u725B\u30BF\u30F3\u3068\u304A\u9152\u304C\u3046\u307E\u3044"
+  _sentence: "\u3007\u3007\u3061\u3083\u3093\u304B\u308F\u3044\u3044"
   _sentenceText: {fileID: 8570200168188418313}
   _date: 20XX/XX/XX
   _dateText: {fileID: 8570200167310457344}

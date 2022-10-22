@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
-    [SerializeField] TweetsData _tweet;
+    [SerializeField] TweetGenerator _tweet;
     [SerializeField] Text _timerText;
     [SerializeField] Text _countDownText;
     [Tooltip("カウントダウン時にクリックの入力を受け付けないように")]
