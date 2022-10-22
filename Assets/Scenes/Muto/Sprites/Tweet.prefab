@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eb54859823482bc43baf17cbae7c5ec0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7e1f36213b27ba4fbaf3761cb88d50a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1496,6 +1496,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6134848742504942460}
     m_Modifications:
+    - target: {fileID: 608196968119040769, guid: bdac9093f2316ea4c85a53ea6baedb40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 61bbc3a02d290c646a5835a2c6a35a82, type: 3}
+    - target: {fileID: 608196968119040769, guid: bdac9093f2316ea4c85a53ea6baedb40, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 608196968119040769, guid: bdac9093f2316ea4c85a53ea6baedb40, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 608196968119040769, guid: bdac9093f2316ea4c85a53ea6baedb40, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 608196968787795765, guid: bdac9093f2316ea4c85a53ea6baedb40, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
