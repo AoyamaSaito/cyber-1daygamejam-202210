@@ -6,15 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
-    //TweetsData _tweet;
+    [SerializeField] TweetsData _tweet;
     [SerializeField] Text _darkTweetCountText;
     [SerializeField] Text _timerText;
     [SerializeField] Text _countDownText;
-    [Tooltip("カウントダウン時に干渉しないように")]
+    [Tooltip("カウントダウン時にクリックの入力を受け付けないように")]
     [SerializeField] Image _panel;
 
-    float _timer;
-    public float Timer { get => _timer; set => _timer = value; }
+    public static float Timer { get; set; }
     int _biginningDark; //闇ツイート(初期値)
     public int BiginningDark { get => _biginningDark; set => _biginningDark = value; }
     /// <summary> 闇ツイート </summary>
@@ -23,8 +22,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     // Start is called before the first frame update
     void Start()
     {
-        //_tweet = GameObject.Find("GameObject").GetComponent<TweetsData>();
-        BiginningDark = DarkTweet = 5; /* = _tweet.Dark*/
+        Timer = 0;
+        BiginningDark = DarkTweet = _tweet.Dark;
         StartCoroutine(StartCount());
     }
 
@@ -37,24 +36,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         {
             Timer += Time.deltaTime;
             _timerText.text = Timer.ToString("F1");
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                DarkTweet--;
-            }
         }
 
         if (DarkTweet == 0)
         {
-            _panel.gameObject.SetActive(true);
-            Invoke("LoadScene", 1f);
+            SceneManager.LoadScene("ResultTest");
         }
-    }
-
-    /// <summary> クリア画面に遷移(闇ツイート0で呼び出す) </summary>
-    void LoadScene()
-    {
-        SceneManager.LoadScene("ResultTest");
     }
 
     /// <summary> 闇ツイートの数をリセットする </summary>
@@ -64,23 +51,23 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         DarkTweet = BiginningDark;
     }
 
+    /// <summary> 闇ツイートのカウントを減らす </summary>
     public void Count()
     {
         DarkTweet--;
     }
 
-    /// <summary>ゲーム開始のカウントをするコルーチン</summary>
+    /// <summary>ゲーム開始のカウントダウンをするコルーチン</summary>
     IEnumerator StartCount()
     {
-        _countDownText.text = "3";
-        yield return new WaitForSeconds(1);
-        _countDownText.text = "2";
-        yield return new WaitForSeconds(1);
-        _countDownText.text = "1";
-        yield return new WaitForSeconds(1);
-        _countDownText.text = "Start";
+        for (int i = 3; i >= 0; i--)
+        {
+            if (i != 0) _countDownText.text = $"{i}";
+            else        _countDownText.text = "Start";
 
-        yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1);
+        }
+
         _countDownText.text = "";
         _panel.gameObject.SetActive(false);
     }
