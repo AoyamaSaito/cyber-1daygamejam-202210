@@ -75,7 +75,7 @@ public class TweetGenerator : MonoBehaviour
 
         RectTransform rec = _content.GetComponent<RectTransform>();
         Vector2 siz = rec.sizeDelta;
-        siz.x = list.Count * 150;
+        siz.y = list.Count * 150;
         rec.sizeDelta = siz;
 
         return result;
