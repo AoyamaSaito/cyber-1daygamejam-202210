@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     [SerializeField] TweetsData _tweet;
-    [SerializeField] Text _darkTweetCountText;
     [SerializeField] Text _timerText;
     [SerializeField] Text _countDownText;
     [Tooltip("カウントダウン時にクリックの入力を受け付けないように")]
@@ -30,8 +29,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     // Update is called once per frame
     void Update()
     {
-        _darkTweetCountText.text = DarkTweet.ToString();
-
         if (!_panel.gameObject.activeSelf)
         {
             Timer += Time.deltaTime;
