@@ -11,6 +11,6 @@ public class ResultScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _scoreTime.text = GameManager.Timer.ToString("F1");
+        _scoreTime.text = $"{GameManager.Timer:F1} •b‚Å•—ğj‚ğÁ‚µ‹‚Á‚½";
     }
 }
