@@ -37,7 +37,7 @@ public class TweetGenerator : MonoBehaviour
         _shuffleDarkTweets = ShuffleListGenerate(_darkTweets, _dark);
 
         _shuffleNormalTweets.AddRange(_shuffleDarkTweets);
-        _currentTweets = ShuffleListGenerate(_shuffleNormalTweets, 6);
+        _currentTweets = ShuffleListGenerate(_shuffleNormalTweets);
 
         _currentTweets = TweetInstantiate(_currentTweets);
     }
@@ -72,6 +72,11 @@ public class TweetGenerator : MonoBehaviour
         {
             result.Add(Instantiate(list[i], _content));
         }
+
+        RectTransform rec = _content.GetComponent<RectTransform>();
+        Vector2 siz = rec.sizeDelta;
+        siz.x = list.Count * 150;
+        rec.sizeDelta = siz;
 
         return result;
     }
