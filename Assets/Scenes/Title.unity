@@ -6445,7 +6445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u4F8B\uFF1A\u30DD\u30A8\u30E0\u3001\u8EFD\u72AF\u7F6A\n\u3000\u3000\u6226\u4E89\u304C\u304A\u3053\u308A\u305D\u3046\u306A\u8B70\u984C\n\u3000\u3000\u554F\u984C\u304C\u3042\u308B\u767A\u8A00"
+  m_Text: "\u4F8B\uFF1A\u30DD\u30A8\u30E0\u3001\u8EFD\u72AF\u7F6A\n\u3000\u3000\u6226\u4E89\u304C\u304A\u3053\u308A\u305D\u3046\u306A\u8B70\u984C\n\u3000\u3000\u30A4\u30AD\u308A"
 --- !u!222 &1137605162
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6843,7 +6843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1604088972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7389,6 +7389,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2412679009100364820, guid: e2456cedf9467dd43b7f0bbe362c144b, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2412679009100364820, guid: e2456cedf9467dd43b7f0bbe362c144b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2412679009100364821, guid: e2456cedf9467dd43b7f0bbe362c144b, type: 3}
       propertyPath: m_Name
       value: Audio Source
