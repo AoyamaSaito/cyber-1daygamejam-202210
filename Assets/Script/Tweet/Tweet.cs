@@ -15,12 +15,21 @@ public class Tweet : MonoBehaviour
     private string _sentence = "";
     [SerializeField]
     private Text _sentenceText;
+    [Header("“ú")]
+    [SerializeField]
+    private string _date = "20XX/XX/XX";
+    [SerializeField]
+    private Text _dateText;
     [Header("•—ğj‚©‚Ç‚¤‚©")]
     [SerializeField]
     private bool _isDark = false;
 
+    private GameManager _gameManager;
+
     private void Start()
     {
+        _gameManager = GameManager.Instance;
+
         if(_nameText)
         {
             _nameText.text = _name;
@@ -30,6 +39,11 @@ public class Tweet : MonoBehaviour
         {
             _sentenceText.text = _sentence;
         }
+
+        if(_dateText)
+        {
+            _dateText.text = _date;
+        }
     }
 
     /// <summary>
@@ -37,13 +51,10 @@ public class Tweet : MonoBehaviour
     /// </summary>
     public void DarkCheck()
     {
+        Destroy(gameObject);
         if(_isDark == true)
         {
-            //GameManager‚Æ‚©‚É’l‚ğ“ü‚ê‚é
-        }
-        else
-        {
-
+            _gameManager.Count();
         }
     }
 }
